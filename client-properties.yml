@@ -1,10 +1,18 @@
+spring:
+  application:
+    name: eureka-client-service
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: 3440
+    url: jdbc:postgresql://localhost:5432/postgres
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
 eureka:
   client:
-    register-with-eureka: true
-    fetch-registry: true
     service-url:
-      defaultZone: http://localhost:8761/eureka/
-  instance:
-    hostname: localhost
-    message: hello, client
-    
+      defaultZone: http://localhost:8888
